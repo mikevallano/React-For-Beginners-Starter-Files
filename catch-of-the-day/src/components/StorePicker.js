@@ -2,7 +2,18 @@ import React from 'react';
 
 class StorePicker extends React.Component {
   render() {
-    return<p>LOOK: I'm a freakin component</p>
+    return (
+      <React.Fragment>
+        <p>Initial P</p>
+      { /* this is a comment */ }
+        <form className='store-picker'>
+        <h2>Please enter a store</h2>
+        <input type='text' required placeholder='Store Name' />
+        <button type='submit'>Visit Store</button>
+
+        </form>
+      </React.Fragment>
+    )
   }
 }
 
