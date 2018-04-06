@@ -29,7 +29,6 @@ class App extends React.Component {
     order[key] = order[key] + 1 || 1
     // 3. call setState to update our stae object
     this.setState({order})
-
   }
 
   render() {
@@ -41,7 +40,7 @@ class App extends React.Component {
             {Object.keys(this.state.fishes).map(key => <Fish key={key} index={key} details={this.state.fishes[key]} addToOrder={this.addToOrder}/>)}
           </ul>
         </div>
-        {<Order />}
+        {<Order fishes={this.state.fishes} order={this.state.order}/>}
         {<Inventory addFish={this.addFish} addSampleFishes={this.addSampleFishes}/>}
       </div>
     )
